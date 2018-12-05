@@ -5,8 +5,8 @@ use std::io::{BufRead, BufReader};
 
 use day01::*;
 
-fn main() {
-    let file = BufReader::new(File::open("input.txt").expect("file not found"));
+fn main() -> Result<(), std::io::Error> {
+    let file = BufReader::new(File::open("input.txt")?);
 
     let changes = file
         .lines()
@@ -18,4 +18,6 @@ fn main() {
 
     println!("Resulting frequency: {}", resulting_frequency(&changes));
     println!("Duplicate frequency: {}", duplicate_frequency(&changes));
+
+    Ok(())
 }

@@ -18,7 +18,7 @@ pub fn duplicate_frequency(changes: &[i32]) -> i32 {
         }
     }
 
-    0
+    frequency
 }
 
 #[cfg(test)]
@@ -51,22 +51,22 @@ mod tests {
     }
 
     #[test]
-    fn zero_duplicate_frequency() {
+    fn duplicate_frequency_of_zero() {
         assert_eq!(0, duplicate_frequency(&[1, -1]));
     }
 
     #[test]
-    fn ten_duplicate_frequency() {
+    fn duplicate_frequency_of_ten() {
         assert_eq!(10, duplicate_frequency(&[3, 3, 4, -2, -4]));
     }
 
     #[test]
-    fn five_duplicate_frequency() {
+    fn duplicate_frequency_of_five() {
         assert_eq!(5, duplicate_frequency(&[-6, 3, 8, 5, -6]));
     }
 
     #[test]
-    fn fourteen_duplicate_frequency() {
+    fn duplicate_frequency_of_fourteen() {
         assert_eq!(14, duplicate_frequency(&[7, 7, -2, -7, -4]));
     }
 }
